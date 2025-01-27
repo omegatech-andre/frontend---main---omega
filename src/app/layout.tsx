@@ -1,5 +1,8 @@
+import '@mantine/core/styles.css';
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { theme } from '@/styles/theme';
 
 export const metadata: Metadata = {
   title: "Ômega Screen | Tintas Serigráficas",
@@ -12,9 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" {...mantineHtmlProps}>
+      <head>
+        <ColorSchemeScript defaultColorScheme='auto' />
+      </head>
       <body>
-        {children}
+        <MantineProvider theme={theme} defaultColorScheme='auto'>
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );

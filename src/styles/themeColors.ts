@@ -1,6 +1,6 @@
 import { MantineColorsTuple } from "@mantine/core";
 
-export const defaultColor: MantineColorsTuple = [
+const defaultColor: MantineColorsTuple = [
   "#ffe7e8",
   "#ffcece",
   "#ff9b9b",
@@ -13,7 +13,7 @@ export const defaultColor: MantineColorsTuple = [
   "#b20000",
 ];
 
-// export const exemple2: MantineColorsTuple = [
+// const exemple2: MantineColorsTuple = [
 //   "#effde7",
 //   "#e1f8d4",
 //   "#c3efab",

@@ -1,6 +1,6 @@
 "use client";
+import { themeColors } from "@/styles/themeColors";
 import { createTheme, rem } from "@mantine/core";
-import { themeColors } from "@/utils/themeColors";
 
 export const theme = createTheme({
   primaryColor: 'defaultColor',

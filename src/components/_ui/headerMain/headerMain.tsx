@@ -1,4 +1,3 @@
-"use client"
 import themeDevices from "@/styles/themeDevices";
 import { carouselMockImages } from "@/utils/carouselMockImages";
 import { Carousel } from "@mantine/carousel";
@@ -6,31 +5,10 @@ import { Button, Card, Flex, Image, Stack, Text } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import BtnSections from "../btnSections/btnSections";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 export default function HeaderMain() {
   const { isMobile } = themeDevices();
   const autoplay = useRef(Autoplay({ delay: 3000 }));
-  const headerMainRef = useRef(null);
-
-  useGSAP(() => {
-    if (headerMainRef.current) {
-      gsap
-        .set(".object-animated", {
-          yPercent: 100,
-          opacity: 0,
-        });
-
-      gsap
-        .timeline()
-        .to(".object-animated", {
-          opacity: 1,
-          yPercent: 0,
-          duration: .5,
-        });
-    }
-  }, { scope: headerMainRef })
 
   const slides = carouselMockImages.map((url, index) => (
     <Carousel.Slide key={index}>
@@ -42,7 +20,7 @@ export default function HeaderMain() {
 
   return (
     <>
-      <Stack ref={headerMainRef} gap={"lg"} bg={"linear-gradient(180deg, #950000 0%, #292626 100%)"} p={"lg"}>
+      <Stack gap={"lg"} bg={"linear-gradient(180deg, #950000 0%, #292626 100%)"} p={"lg"}>
         <Flex component={"span"} style={{ overflow: "hidden" }} justify={"space-between"} w={"90vw"} m={"0 auto"}>
           <Button className="object-animated" opacity={0} variant="outline" color={"white"} component="a" href="/">Início</Button>
           <Button className="object-animated" opacity={0} variant="outline" color={"white"} component="a" href="/boletim-tecnico">Boletim Téc.</Button>

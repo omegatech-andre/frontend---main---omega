@@ -1,4 +1,5 @@
 "use client"
+import Youtube from "@/components/_ui/youtube/youtbube";
 import themeDevices from "@/styles/themeDevices";
 import { pageHomeImages } from "@/utils/pageHomeImages";
 import { Card, Flex, Group, Image, Paper, Stack, Text } from "@mantine/core";
@@ -40,9 +41,10 @@ export default function PageHome() {
           }}>
             {images}
           </Group>
-          <Text className="object-animated" opacity={"0"} w={"60rem"} maw={"90vw"} component={"h3"} fz={isMobile ? "h5" : "h4"} my={isMobile ? "xl" : "50"}>
+          <Text className="object-animated" opacity={"0"} w={"60rem"} maw={"90vw"} component={"h3"} my={isMobile ? "xl" : "50"}>
             Disponibilizamos de uma qualidade de alto padrão para as estampas dos nossos clientes e parceiros! Assim, mantendo o padrão Ômega com mais cor e intensidade.
           </Text>
+          <Youtube />
         </Stack>
       </Flex>
     </>

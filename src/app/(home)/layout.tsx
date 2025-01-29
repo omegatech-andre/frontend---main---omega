@@ -25,7 +25,7 @@ export default function HomeLayout({
         .to(".object-animated", {
           opacity: 1,
           yPercent: 0,
-          duration: .5,
+          duration: .7,
         });
     }
   }, { scope: homeLayout });

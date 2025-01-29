@@ -35,7 +35,7 @@ export default function PageHome() {
           <Text className="object-animated" opacity={"0"} component={"h1"} fz={isMobile ? "h3" : "h1"} fw={"bold"} my={isMobile ? "xl" : "50"}>
             Levar mais cor e intensidade  é a nossa missão
           </Text>
-          <Group component={"span"} m={"0 auto"} gap={isMobile ? "8" : ""} style={{
+          <Group component={"span"} m={"0 auto"} py={"xs"} gap={isMobile ? "8" : ""} style={{
             overflow: "hidden",
           }}>
             {images}

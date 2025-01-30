@@ -1,7 +1,7 @@
 import themeDevices from "@/styles/themeDevices";
 import { carouselMockImages } from "@/utils/carouselMockImages";
 import { Carousel } from "@mantine/carousel";
-import { Button, Card, Flex, Image, Stack, Text } from "@mantine/core";
+import { Button, Card, Flex, Group, Image, Stack, Text } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import BtnSections from "../btnSections/btnSections";
@@ -39,12 +39,12 @@ export default function HeaderMain() {
             {slides}
           </Carousel>
           <Flex pos={"absolute"} w={"100%"} h={"100%"} justify={"center"} direction={"column"} ta={"center"} align={"center"} p={"xl"} pt={"0"}>
-            <span style={{
+            <Group component={"span"} style={{
               overflow: "hidden",
             }}>
               <Image className="object-animated" opacity={"0"} src={"./images/logo/logo-01.webp"} w={isMobile ? "12rem" : "20rem"} />
-            </span>
-            <span style={{
+            </Group>
+            <Group component={"span"} style={{
               overflow: "hidden",
             }}>
               <Text className="object-animated" opacity={"0"} fz={isMobile ? "30" : "64"} fw={"bold"} c={"white"} inline style={{
@@ -52,8 +52,8 @@ export default function HeaderMain() {
               }}>
                 SOMOS A ÔMEGA
               </Text>
-            </span>
-            <span style={{
+            </Group>
+            <Group component={"span"} style={{
               overflow: "hidden",
             }}>
               <Text className="object-animated" opacity={"0"} fz={isMobile ? "sm" : "md"} fw={"bold"} c={"white"} w={"33rem"} maw={"80vw"} style={{
@@ -61,7 +61,7 @@ export default function HeaderMain() {
               }}>
                 A Ômega é uma Indústria especializada em tintas serigráficas, produzindo esse padrão de qualidade desde 2021, tornando-se referência em Caruaru - PE.
               </Text>
-            </span>
+            </Group>
           </Flex>
         </Card>
         <BtnSections />

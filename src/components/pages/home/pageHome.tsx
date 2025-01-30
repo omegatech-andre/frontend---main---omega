@@ -33,25 +33,25 @@ export default function PageHome() {
           animation: "degradeanimado 8s infinite alternate ease-in-out",
         }} />
         <Stack w={"90vw"} m={"auto"} gap={isMobile ? "40" : "60"} align={"center"} my={isMobile ? "40" : "60"}>
-          <span style={{
+          <Group component={"span"} style={{
             overflow: "hidden",
           }}>
             <Text className="object-animated" opacity={"0"} component={"h1"} fz={isMobile ? "h3" : "h1"} fw={"bold"}>
               Levar mais cor e intensidade  é a nossa missão
             </Text>
-          </span>
+          </Group>
           <Group component={"span"} m={"0 auto"} py={"xs"} gap={isMobile ? "8" : ""} style={{
             overflow: "hidden",
           }}>
             {images}
           </Group>
-          <span style={{
+          <Group component={"span"} style={{
             overflow: "hidden",
           }}>
             <Text className="object-animated" opacity={"0"} w={"60rem"} maw={"90vw"} component={"h3"}>
               Disponibilizamos de uma qualidade de alto padrão para as estampas dos nossos clientes e parceiros! Assim, mantendo o padrão Ômega com mais cor e intensidade.
             </Text>
-          </span>
+          </Group>
           <Youtube />
         </Stack>
       </Flex>

@@ -1,4 +1,5 @@
 "use client"
+import CarouselEstampador from "@/components/_ui/carouselEstampador/carouselEstampador";
 import Youtube from "@/components/_ui/youtube/youtbube";
 import themeDevices from "@/styles/themeDevices";
 import { pageHomeImages } from "@/utils/pageHomeImages";
@@ -53,6 +54,7 @@ export default function PageHome() {
             </Text>
           </Group>
           <Youtube />
+          <CarouselEstampador />
         </Stack>
       </Flex>
     </>
